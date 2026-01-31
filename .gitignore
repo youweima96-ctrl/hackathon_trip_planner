@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.DS_Store
+*.log
+venv/
+venv_new/
+__pycache__/
+.streamlit/
+.trae/
