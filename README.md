@@ -1,149 +1,97 @@
-# 古董展示交易平台
+# Singapore Vibe Navigator (狮城漫步) 🇸🇬
 
-一个专业的古董展示交易平台，为古董爱好者和收藏家提供在线展示、交流和交易服务。
+**Singapore Vibe Navigator** is an AI-powered personalized travel guide designed to help users explore Singapore based on their current "vibe" or mood. Unlike traditional itinerary planners, this application focuses on the *feeling* of the journey—whether you're looking for a chill afternoon, an energetic adventure, or a melancholic cultural dive.
 
-## 🎯 功能特色
-
-### ✅ 已完成功能
-- **用户认证系统** - 注册、登录、退出
-- **古董展示** - 浏览、搜索、筛选古董
-- **图片上传** - 支持多图上传、自动压缩优化
-- **实时聊天** - 基于Supabase Realtime的即时通讯
-- **好友系统** - 添加好友、管理好友关系
-- **响应式设计** - 完美适配移动端、平板、桌面端
-
-### 🏗️ 技术架构
-- **前端**: React 18 + TypeScript + Vite + Tailwind CSS
-- **状态管理**: Zustand
-- **后端**: Supabase (认证、数据库、存储、实时通信)
-- **图片处理**: Browser Image Compression
-- **UI组件**: Headless UI + Radix UI
-
-## 🚀 快速开始
-
-### 环境要求
-- Node.js 18+
-- npm 或 pnpm
-
-### 安装依赖
-```bash
-npm install
-```
-
-### 配置环境变量
-复制 `.env.example` 为 `.env` 并填写您的 Supabase 配置：
-```bash
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-### 启动开发服务器
-```bash
-npm run dev
-```
-
-访问 http://localhost:5173 查看应用
-
-## 📁 项目结构
-
-```
-src/
-├── components/          # React组件
-│   ├── AuthForm.tsx    # 登录注册表单
-│   ├── AntiqueList.tsx # 古董列表组件
-│   ├── ChatWindow.tsx  # 聊天窗口
-│   └── AuthProvider.tsx # 认证提供者
-├── pages/              # 页面组件
-│   ├── HomePage.tsx    # 首页
-│   ├── ChatPage.tsx    # 聊天页面
-│   ├── PublishPage.tsx # 发布古董页面
-│   └── FriendsPage.tsx # 好友管理页面
-├── stores/             # 状态管理
-│   ├── authStore.ts    # 认证状态
-│   ├── antiqueStore.ts # 古董数据状态
-│   └── messageStore.ts # 消息状态
-├── lib/                # 工具库
-│   ├── supabase.ts     # Supabase客户端
-│   ├── storage.ts      # 文件存储
-│   └── imageUtils.ts   # 图片处理工具
-└── router.tsx          # 路由配置
-```
-
-## 🔧 主要功能详解
-
-### 用户认证
-- 邮箱注册登录
-- JWT Token认证
-- 用户信息管理
-
-### 古董展示
-- 网格布局展示
-- 多条件筛选（类别、价格、年代）
-- 关键词搜索
-- 图片轮播展示
-
-### 图片上传
-- 多文件选择
-- 自动压缩优化（最大1MB，1920px）
-- 格式验证（JPG、PNG、WebP）
-- Supabase Storage存储
-
-### 实时聊天
-- 基于Supabase Realtime
-- 消息实时推送
-- 好友在线状态
-- 聊天记录持久化
-
-### 好友系统
-- 搜索添加好友
-- 好友请求管理
-- 好友列表展示
-- 一键发起聊天
-
-## 🎨 设计特色
-
-- **古典风格**: 深棕色配金色，体现古董韵味
-- **响应式**: 适配各种设备尺寸
-- **用户体验**: 流畅的交互动画
-- **现代化**: 简洁清晰的界面布局
-
-## 🛡️ 安全特性
-
-- Row Level Security (RLS) 策略
-- 用户权限控制
-- 数据访问隔离
-- 图片访问权限管理
-
-## 📱 移动端优化
-
-- 触摸友好的界面设计
-- 底部导航栏
-- 手势滑动支持
-- 图片懒加载
-
-## 🔮 未来规划
-
-- [ ] 古董详情页面
-- [ ] 个人中心完善
-- [ ] 我的古董管理
-- [ ] 收藏功能
-- [ ] 交易功能
-- [ ] 评价系统
-- [ ] 通知推送
-- [ ] 多语言支持
-
-## 🤝 贡献指南
-
-欢迎提交 Issue 和 Pull Request！
-
-## 📄 许可证
-
-MIT License
-
-## 🆘 支持
-
-如有问题，请在 GitHub 提交 Issue。
+**狮城漫步 (Singapore Vibe Navigator)** 是一款基于 AI 的个性化旅游向导，旨在根据您当下的“心情”或“氛围”为您规划新加坡的探索之旅。与传统的行程规划不同，本应用更注重旅程的*感受*——无论您是想要一个惬意的下午、一场充满活力的冒险，还是一次忧郁的文化沉浸之旅。
 
 ---
 
-**古董交易平台** - 连接古今，传承文化
+## 🌟 Key Features (核心功能)
+
+### 1. 🎭 Mood-Based Route Generation (基于心情的路线生成)
+*   **AI Planning**: Select your mood (Chill, Energetic, Foodie, Melancholy, Cultural), duration, and starting point. The AI (GPT-4o) generates a custom walking route tailored to your vibe.
+*   **Custom Preferences**: Input specific requests (e.g., "I want to eat chicken rice" or "Quiet parks only") to further customize the route.
+*   **Visual Preview**: View your route on an interactive map with optimized markers and paths.
+
+### 2. 📸 Real-Time Visuals (实时景点预览)
+*   **Smart Image Fetching**: Automatically fetches high-quality, real photos of attractions using the **Unsplash API**.
+*   **Hover Previews**: Simply hover over any map marker to see an instant photo thumbnail of the location.
+*   **No Hallucinations**: Strictly uses real search results, avoiding AI-generated fake images.
+
+### 3. 🌍 Community & Social (社区与社交)
+*   **Share Plans**: Save your generated itineraries to the community feed.
+*   **Meetups (结伴同游)**: Schedule walking tours and invite others to join directly from the app.
+*   **Post-Trip Reviews (旅后感)**: Rate your trip, write reviews, and track how your mood changed after the journey (e.g., "Chill ➡️ Energetic").
+
+### 4. 🤖 Smart Search (智能搜索)
+*   **AI Recommendations**: Ask for specific types of places (e.g., "Quiet cafe with sea view") and get AI-curated recommendations.
+*   **Add to Route**: seamlessly add discovered places to your current itinerary.
+
+### 5. 🎟️ Seamless Payments (无缝支付)
+*   **Ticket Integration**: See estimated prices for attractions.
+*   **Stripe Integration**: Book tickets directly through the app (simulated via Stripe Sandbox).
+
+---
+
+## 🛠️ Tech Stack (技术栈)
+
+*   **Frontend**: [Streamlit](https://streamlit.io/) (Python-based UI framework)
+*   **Map Visualization**: [Folium](https://python-visualization.github.io/folium/) & [Streamlit-Folium](https://github.com/randyzwitch/streamlit-folium)
+*   **AI Core**: [OpenAI GPT-4o](https://openai.com/) (Route planning & natural language understanding)
+*   **Image Service**: [Unsplash API](https://unsplash.com/developers) (Real-time attraction photos)
+*   **Database**: SQLite (User data, plans, meetups, reviews)
+*   **Payments**: Stripe API (Payment processing)
+
+---
+
+## 🚀 Getting Started (快速开始)
+
+### Prerequisites (前置要求)
+*   Python 3.9+
+*   API Keys for: OpenAI, Stripe (Test mode), Unsplash, Google Maps (Optional)
+
+### Installation (安装步骤)
+
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/singapore-vibe-navigator.git
+    cd singapore-vibe-navigator
+    ```
+
+2.  **Create a virtual environment**:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # Mac/Linux
+    # venv\Scripts\activate  # Windows
+    ```
+
+3.  **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Configure Environment Variables**:
+    Create a `.env` file in the root directory:
+    ```ini
+    OPENAI_API_KEY=your_openai_key
+    STRIPE_API_KEY=your_stripe_secret_key
+    STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+    UNSPLASH_ACCESS_KEY=your_unsplash_access_key
+    GOOGLE_MAPS_API_KEY=your_google_maps_key (Optional)
+    ```
+
+5.  **Run the App**:
+    ```bash
+    streamlit run app.py
+    ```
+
+---
+
+## 📸 Screenshots (截图)
+
+*(Add screenshots of the Map, Community Feed, and Review features here)*
+
+---
+
+## 📄 License
+This project is open-source and available under the MIT License.
