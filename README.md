@@ -1,8 +1,18 @@
-# Singapore Vibe Navigator (狮城漫步) 🇸🇬
+# 🇸🇬 Singapore Vibe Navigator (狮城漫步)
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
+[English](#english-project-introduction) | [中文](#中文项目介绍)
 
 **Singapore Vibe Navigator** is an AI-powered personalized travel guide designed to help users explore Singapore based on their current "vibe" or mood. Unlike traditional itinerary planners, this application focuses on the *feeling* of the journey—whether you're looking for a chill afternoon, an energetic adventure, or a melancholic cultural dive.
 
 **狮城漫步 (Singapore Vibe Navigator)** 是一款基于 AI 的个性化旅游向导，旨在根据您当下的“心情”或“氛围”为您规划新加坡的探索之旅。与传统的行程规划不同，本应用更注重旅程的*感受*——无论您是想要一个惬意的下午、一场充满活力的冒险，还是一次忧郁的文化沉浸之旅。
+
+## 🔗 Live Demo (在线演示)
+
+您可以直接访问以下链接查看演示版本（需先完成 Streamlit Cloud 部署）：
+- **[点击进入在线演示 (Live Demo)](https://share.streamlit.io/)**
 
 ---
 
